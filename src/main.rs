@@ -19,10 +19,18 @@ fn main() {
         None => println!("Ziya is NOT found")
     };
 
+    mydb.remove("Adil");
+    match mydb.get("Adil"){
+        Some(abc)=>println!("Age: {}", abc),
+        None => println!("Adil is NOT found")
+    };
+
     for (k,v) in mydb{
         if k =="Ziya"{
             println!("Found Ziya, her age is {:?}\n",v)
         }
     };
+    
+
 
 }
